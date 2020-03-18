@@ -1,0 +1,552 @@
+body{
+    font-family: "Open Sans";
+}
+
+/*Navigation + Header*/
+/**************************/
+.content {
+    width: 94%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+h4{
+    margin-left: 10%;
+    padding-top: 3%;
+    color: #fefefe;
+}
+  
+.logo {
+    width: 13%;
+    position: absolute;
+    left: 17%;
+    margin-top: 1%;
+    transform: translateX(-50%);
+    transition: width .3s ease ;
+}
+  
+nav {
+    background-color: #423E42;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: +1;
+}
+
+ul{
+    margin-left: 70%;
+    margin-top: 1.3%;
+}
+
+  
+nav ul li {
+    display: inline-block;
+    margin: 16px ;
+}
+  
+nav ul li a {
+    text-decoration: none;
+    color: #A0A0A0;
+    font-size: 15px;
+}
+  
+nav ul li a:hover{
+    color: #FED844;
+    transition: 0.5s;
+    text-decoration: none;
+
+}
+
+nav.black{
+    height: 50px;
+    background-color: #423E42;
+}
+
+nav.black .logo{
+    width: 4%;
+}
+
+nav.black ul {
+    height: 50px;
+    margin-top: -0.5%;
+}
+
+
+#mobile-menu{
+  visibility: hidden;
+}
+
+@media screen and (max-width: 959px){
+  #desktop-menu{
+    visibility: hidden;
+  }
+
+  nav.black{
+    height: 100px;
+    background-color: #423E42;
+  }
+
+  #mobile-menu{
+    visibility: visible;
+    background: #423E42;
+    
+  }
+
+  #menuToggle{
+    
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a{
+    text-decoration: none;
+    color: #423E42;
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover{
+    color: tomato;
+  }
+
+  #menuToggle input{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  #menuToggle span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #fefefe;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    background : 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    opacity : 0.55s ease;
+  }
+
+  #menuToggle span:first-child{
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2){
+    transform-origin: 0% 100%;
+  }
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #423E42;
+  }
+
+/*
+ * But let's hide the middle one.
+ */
+  #menuToggle input:checked ~ span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle input:checked ~ span:nth-last-child(2){
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu{
+    position: absolute;
+    width: 40%;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 40%;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+
+  #menu li{
+    padding: 10px 0;
+    font-size: 22px;
+    margin-top: -500px;
+  }
+
+  
+
+/*
+ * And let's slide it in from the left
+ */
+  #menuToggle input:checked ~ ul{
+    transform: none;
+  }
+
+}
+  
+
+
+
+
+
+@media screen and (max-width: 959px){
+  h1{
+    font-size: 30px;
+    margin-top: 60%;
+    margin-left: 2%;
+  }
+
+  .block{
+    visibility: hidden;
+  }
+}
+
+
+
+
+/* Override UGG site */
+#main {width: 100%; padding:0;}
+.content-asset p {margin:0 auto;}
+.breadcrumb {display:none;}
+
+/* Helpers */
+/**************************/
+.margin-top-10 {padding-top:10px;}
+.margin-bot-10 {padding-bottom:10px;}
+
+/* Typography */
+/**************************/
+.first-character {font-weight:400; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
+
+.sc {color: #3b8595;}
+.ny {color: #3d3c3a;}
+.atw {color: #c48660;}
+
+/* Section - Title */
+/**************************/
+#parallax-world-of-ugg .title {background: white; padding: 60px; margin:0 auto; text-align:center;}
+#parallax-world-of-ugg .title h1 {font-size:35px; letter-spacing:8px;}
+
+/* Section - Block */
+/**************************/
+#parallax-world-of-ugg .block {background: white; padding: 60px; width:820px; margin:0 auto; text-align:justify;}
+#parallax-world-of-ugg .block-gray {background: #f2f2f2;padding: 60px;}
+#parallax-world-of-ugg .section-overlay-mask {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.70;}
+
+/* Section - Parallax */
+/**************************/
+#parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; height: 800px; background-image: url(/img/lea-vincent.png); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
+#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; height: 600px; background-image: url(../img/georgie-cobbs-muOHbrFGEQY-unsplash.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
+
+/* Extras */
+/**************************/
+#parallax-world-of-ugg .line-break {border-bottom:1px solid black; width: 150px; margin:0 auto;}
+
+/* Media Queries */
+/**************************/
+@media screen and (max-width: 959px) and (min-width: 768px) {
+  #parallax-world-of-ugg .block {padding: 40px; width:620px;}
+}
+@media screen and (max-width: 767px) {
+  #parallax-world-of-ugg .block {padding: 30px; width:420px;}
+  #parallax-world-of-ugg h2 {font-size:30px;}
+  #parallax-world-of-ugg .block {padding: 30px;}
+  #parallax-world-of-ugg .parallax-one, #parallax-world-of-ugg .parallax-two, #parallax-world-of-ugg .parallax-three {padding-top:100px; padding-bottom:100px;}
+}
+
+@media screen and (max-width: 479px) {
+  #parallax-world-of-ugg .block {padding: 30px 15px; width:290px;}
+}
+
+
+/* Qui-suis-je */
+/**************************/
+
+#background{
+  background-color: #666366;
+  height: 700px;
+}
+
+#background2{
+    background-color: #666366;
+    height: 700px;
+}
+
+#background-mobile{
+  display: none;
+}
+
+#background > p{
+    color: #fefefe;
+    font-size: 20px;
+    width: 45%;
+    margin-left: 10%;
+}
+
+.texte1{
+    margin-top: 5%;
+    color: #fefefe;
+    font-size: 20px;
+    width: 45%;
+    margin-left: 10%;
+}
+
+.img-parcours{
+    width: 33%;
+    margin-top: -30%;
+    margin-left: 60%;
+}
+
+.img-projets{
+    width: 110%;
+    margin-top: 2%;
+    margin-left: -5%;
+}
+
+@media screen and (max-width: 959px){
+  .texte1{
+    width: 80%;
+    margin-left: 10%;
+  }
+  
+  #background{
+    height: 1400px;
+  }
+
+  #background2{
+    display: none;
+  }
+
+  #background-mobile{
+    display: block;
+    height: 700px;
+    background-color: #666366;
+  }
+
+  .img-parcours{
+    width: 100%;
+    margin-left: -4%;
+    margin-top: 15%;
+  }
+
+  .img-projets{
+    visibility: hidden;
+  }
+
+  .img-projets-mobile{
+    width: 100%;
+    margin-top: 10%;
+  }
+}
+
+
+
+/*Gallerie*/
+/**************************/
+
+#portfolio{
+    margin-left: -27%;
+    background-color: #666366;
+    z-index: 0;
+}
+
+.portfolio-content-head ul li {
+    display: inline-block;
+    cursor: pointer;
+    padding: 12px 14px;
+    font-weight: 700;
+    color: #696969;
+    margin: 0px 10px;
+    transition: all 0.2s;
+    font-size: 16px;
+}
+
+.portfolio-content-head ul li:hover {
+    color: #0098f7;
+}
+
+.mixitup-control-active {
+    color: #0098f7;
+}
+
+.mix {
+    display: inline-block;
+}
+
+.portfolio-item {
+    position: relative;
+}
+
+.portfolio-content-items .row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.portfolio-content-items .col-md-4,
+.portfolio-content-item .col-sm-4 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.portfolio-img {
+    position: relative;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.img-responsive{
+    background: cover;
+    height: 300px;
+}
+
+.portfolio-img img {
+    transition: all 0.5s;
+    width: 100%;
+}
+
+.portfolio-content-head {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.portfolio-item:hover .portfolio-img img {
+    transform: scale(1.4);
+}
+
+.portfolio-content {
+    padding-top: 22px;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    visibility: hidden;
+    transition: all 0.5s;
+    transform: scale(0);
+}
+
+.portfolio-overlay p,
+.portfolio-overlay a {
+    position: relative;
+}
+
+.portfolio-overlay::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 0;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    transition: 50ms height ease 150ms;
+}
+
+.portfolio-overlay::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 0;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    transition: 100ms width ease 200ms;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.portfolio-overlay .category {
+    margin-top: 90px;
+    margin-bottom: 19px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.portfolio-overlay .magnify-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background: #0098f7;
+    margin: 0 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.25s;
+}
+
+.portfolio-overlay .magnify-icon:hover {
+    background: #0098f7;
+}
+
+.portfolio-overlay .magnify-icon p span i {
+    font-size: 15px;
+    color: #fff;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 959px){
+  .img-responsive{
+    height: 500px;
+  }
+}
+
+/*Contact*/
+/**************************/
+
+.form-area{
+    margin-left: 25%;
+    padding-top: 10%;
+    color: #fefefe;
+}
+
+.background{
+    background-color:#666366;
+    height: 600px;
+    width: 100%;
+}
+
+@media screen and (max-width: 959px){
+  .form-area{
+    margin-left: 0%;
+    padding-top: 10%;
+    color: #fefefe;
+  }
+}
+  
+  
+
